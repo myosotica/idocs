@@ -9,7 +9,7 @@ const config: DocsThemeConfig = {
   chat: {
     link: 'https://t.me/iconicompany',
   },
-  docsRepositoryBase: 'https://github.com/iconicompany/idocs',
+  docsRepositoryBase: 'https://github.com/iconicompany/idocs/blob/main',
   footer: {
     text: 'Iconicompany docs',
   },
