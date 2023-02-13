@@ -1,0 +1,95 @@
+import { Tab, Tabs } from 'nextra-theme-docs'
+ 
+## Before you begin
+
+To start fullstack development on your PC, you have two options
+
+1. Install [Ubuntu](https://ubuntu.com/download)/[Kubuntu](https://kubuntu.org/getkubuntu/) (if you prefer KDE) - recomended way
+2. [Install chocolatley package manager](https://chocolatey.org/install) in Windows OS, or download and install all required packages manully
+
+## Install NodeJS
+
+<Tabs items={['Ubuntu', 'Windows']}>
+  <Tab>
+    ``` 
+      curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+    sudo apt-get install -y nodejs
+    ```
+  </Tab>
+  <Tab>
+    ```
+    choco install nodejs
+    ```
+  </Tab>
+</Tabs>
+
+## Install VSCode
+
+Build and debug modern web and cloud applications. Code is free and available on your favorite platform - Linux, Mac OSX, and Windows.
+
+<Tabs items={['Ubuntu', 'Windows']}>
+  <Tab>
+    ```
+    cd /tmp
+    wget -O vscode.deb 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64'
+    sudo apt install ./vscode.deb
+    rm -f vscode.deb
+    ```
+  </Tab>
+  <Tab>
+    ```
+    choco install vscode
+    ```
+  </Tab>
+</Tabs>
+
+## Install PostgreSQL
+
+PostgreSQL is an object-relational database management system.
+
+<Tabs items={['Ubuntu', 'Windows']}>
+  <Tab>
+    ```
+    sudo apt-get install -y postgresql postgresql-client
+    ```
+  </Tab>
+  <Tab>
+    ```
+    choco install postgresql -y --params '/Password:test'
+    ```
+  </Tab>
+</Tabs>
+
+## Install DBeaver
+
+DBeaver is free and open source universal database tool for developers and database administrators.
+
+<Tabs items={['Ubuntu', 'Windows']}>
+  <Tab>
+    ```
+    sudo add-apt-repository ppa:serge-rider/dbeaver-ce -y
+    sudo apt-get install dbeaver-ce -y
+    ```
+  </Tab>
+  <Tab>
+    ```
+    choco install dbeaver -y
+    ```
+  </Tab>
+</Tabs>
+
+## Install Chromium
+
+Chromium is an open-source browser project that aims to build a safer, faster, and more stable way for all Internet users to experience the web
+
+<Tabs items={['Ubuntu', 'Windows']}>
+  <Tab>
+  
+    sudo add-apt-repository ppa:savoury1/chromium -y
+    sudo apt-get update
+    sudo apt install chromium-browser -y
+  </Tab>
+  <Tab>
+   choco install chromium -y
+  </Tab>
+</Tabs>

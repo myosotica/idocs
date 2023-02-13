@@ -3,4 +3,13 @@ const withNextra = require('nextra')({
   themeConfig: './theme.config.tsx',
 })
 
-module.exports = withNextra()
+const basePath = '/idocs';
+
+module.exports = {
+  ...withNextra(),
+  images: {
+    unoptimized: true,
+  },
+  basePath,
+  assetPrefix: basePath,
+};

@@ -1,0 +1,17 @@
+{
+  "settings": {
+      "jshint.options": {"esversion": 9}
+  },
+  "files.associations": {
+    "*.js": "javascriptreact",
+    "*.mjs": "javascriptreact"
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact"
+  ],
+  "files.eol": "\n",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
