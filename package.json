@@ -1,7 +1,8 @@
 {
-  "name": "nextra-docs-template",
+  "name": "idocs",
+  "private": "true",
   "version": "0.0.1",
-  "description": "Nextra docs template",
+  "description": "Iconicompany docs",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -15,7 +16,7 @@
     "type": "git",
     "url": "git+https://github.com/iconicompany/idocs.git"
   },
-  "author": "Shu Ding <g@shud.in>",
+  "author": "Iconicompanu <contact@iconicompany.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/iconicompany/idocs/issues"
