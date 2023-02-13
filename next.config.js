@@ -4,12 +4,18 @@ const withNextra = require('nextra')({
 })
 
 const basePath = '/idocs';
-
-module.exports = {
-  ...withNextra(),
+const nextConfig = {
   images: {
     unoptimized: true,
   },
+  reactStrictMode: true,
+  swcMinify: true,
+  trailingSlash: true,
   basePath,
   assetPrefix: basePath,
+};
+
+module.exports = {
+  ...withNextra(),
+  ...nextConfig
 };
