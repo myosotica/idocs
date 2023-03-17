@@ -1,6 +1,7 @@
 {
   "index": "Introduction",
   "nodejs": "Nodejs docs",
+  "administration": "Servers, databases, clusters"
   "contact": {
     "title": "Contact ↗",
     "type": "page",
