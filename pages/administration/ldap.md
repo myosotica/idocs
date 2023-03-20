@@ -41,3 +41,7 @@ ldapsearch -x -b $baseDN -s sub "(&(objectclass=posixAccount)(uid=$uid))" | sed 
 AuthorizedKeysCommand /opt/bin/ldapauth.sh
 AuthorizedKeysCommandUser root
 ```
+
+В конце:
+
+`sudo service sshd restart`
