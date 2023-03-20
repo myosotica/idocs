@@ -20,6 +20,8 @@ https://computingforgeeks.com/how-to-configure-ubuntu-as-ldap-client/
 
 ## ssh keys
 
+https://openssh-ldap-pubkey.readthedocs.io/en/latest/openldap.html
+
 Добавить аттрибут
 ```
 curl -o openssh-lpk.ldif https://openssh-ldap-pubkey.readthedocs.io/en/latest/_downloads/484070d0b1da0579a2bc2dda709186fd/openssh-lpk.ldif.txt
