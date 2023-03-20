@@ -33,7 +33,7 @@ sudo ldapadd -H ldapi:/// -Y EXTERNAL -f openssh-lpk.ldif
 ```
 #!/bin/bash
 uid=$1
-baseDN=ou=people,dc=iconicompany,dc=com
+baseDN=ou=users,dc=iconicompany,dc=com
 ldapsearch -x -b $baseDN -s sub "(&(objectclass=posixAccount)(uid=$uid))" | sed -n '/^ /{H;d};/sshPublicKey:/x;$g;s/\n *//g;s/sshPublicKey: //gp'
 ```
 
