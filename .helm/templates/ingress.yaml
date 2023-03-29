@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: idocs
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+  tls:
+    - secretName: {{ $.Values.env.HOST }}
+      hosts:
+        - {{ $.Values.env.HOST }}
+spec:
+  rules:
+  - host: {{ $.Values.env.HOST }}
+    http:
+      paths:
+      - path: /idocs
+        pathType: Prefix
+        backend:
+          service:
+            name: idocs
+            port:
+              number: 3000

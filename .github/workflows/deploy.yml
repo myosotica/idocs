@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   push:
-    branches: [main]
+    branches: [DISABLED]
 
 jobs:
   github_pages_deploy:

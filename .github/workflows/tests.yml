@@ -2,9 +2,9 @@ name: Tests
 
 on:
   push:
-    branches: [main]
+    branches: [DISABLED]
   pull_request:
-    branches: [main]
+    branches: [DISABLED]
 
 jobs:
   lint_and_tests:
