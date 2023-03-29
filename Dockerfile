@@ -18,7 +18,7 @@ RUN npm i -g npm
 WORKDIR /app
 COPY *.js *.yaml *.ts? *.json ./
 COPY pages pages
-COPY .git .git
+#COPY .git .git
 
 COPY --from=deps /app/node_modules ./node_modules
 RUN npm run export
