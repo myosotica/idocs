@@ -1,2 +1,2 @@
-global:
+env:
   host: sandbox.iconicompany.com
