@@ -9,7 +9,6 @@ spec:
     - secretName: {{ $.Values.env.HOST }}
       hosts:
         - {{ $.Values.env.HOST }}
-spec:
   rules:
   - host: {{ $.Values.env.HOST }}
     http:
