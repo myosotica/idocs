@@ -25,3 +25,5 @@
 
 Ссылка на таблицу с распределением по проектам, ники членов команды в Телеграмм  
 [Проекты и участники](https://docs.google.com/spreadsheets/d/1D6xG40p7n4ldzysEihfvp1yb9k9lEchiUSHg2klZYmg/edit#gid=0)
+
+[Как писать эту инструкцию](https://www.markdownguide.org/basic-syntax/)
