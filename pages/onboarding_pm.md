@@ -90,6 +90,8 @@
 [Agile Manifest](https://agilemanifesto.org/iso/ru/manifesto.html)
 [Scrum Guide](https://scrumguides.org/docs/scrumguide/v2020/2020-Scrum-Guide-Russian.pdf)
 
+![Scrum Framework](/assets/images/scrum.png)
+
 ## Dayli
 Дейли проводится каждый день. Не для того, чтобы отчитаться, а для того, чтобы:  
 - видеть прогресс команды  
