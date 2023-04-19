@@ -2,6 +2,8 @@
   "index": "Introduction",
   "nodejs": "Nodejs docs",
   "administration": "Servers, databases, clusters",
+  "onboarding": "Onboarding for DEVELOPER",
+  "onboarding_pm": "Onboarding for PROJECT MANAGER",
   "contact": {
     "title": "Contact ↗",
     "type": "page",
