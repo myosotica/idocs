@@ -20,3 +20,75 @@
 13. Проверка на уязвимости прошла успешно  
 14. Реализованная функция была описана в документации для конечного пользователя.  
 15. При релизе в package.json обновлена версия приложения  
+
+## Именования переменных
+
+Называть в соответствии с содержимым  
+Для полей модели используется camelCase  
+
+## Обратить внимание
+
+Вместо +params.value лучше явное преобразование parseInt(params.value)  
+
+Не использовать var, let  
+
+## Особенности вычислений с плавающей точкой
+
+```
+2.51 + .01;                   // => 2.5199999999999996
+currency(2.51).add(.01);      // => 2.52
+```
+
+используйте  
+```
+import currency from 'currency.js';
+currency(7.89).add(c1).add(c2); // => "13.68"
+```
+иначе вылазят такие казусы  
+Назначение платежа: Пополнение лицевого счета 116 НДС не облагается. Остаток на счете: 3386 руб.  
+Рекомендуемая сумма пополнения: 139042.83000000002 руб  
+
+## Отладка и логирование
+
+В логах не допускается вывод персональных данных клиентов (даже в режиме debug)  
+Для отладки использовать debug вместо console.log();  
+```
+import createDebug from 'debug';
+const debug = createDebug('icompany-XXX');
+```
+в коде
+```
+debug(....);
+```
+
+Пример: https://github.com/iconicompany/icompany/blob/master/src/Application.mjs
+
+тогда можно на сервере включать и выключать
+```
+DEBUG=icompany-*
+DEBUG=icompany-messages
+```
+
+## Отправка сообщений об ошибках на почту
+
+Повесить errormailer на обработчик ошибок   
+
+в /libs/middlewares/index.mjs  
+```
+import { notify } from '@ilb/mailer/src/errormailer';
+export const onError = (err, req, res) => {
+...
+notify(err).catch(console.log);
+...
+}
+```
+И админам прописать SERVER_ADMIN с почтами в .pm2/processes.json:   
+1. закомментировать в .env:  
+```
+#apps.strizhinvest.server_admin  
+```
+2. добавить или изменить запись в processes.json:  
+```
+"env":  
+"SERVER_ADMIN": ""  
+```
